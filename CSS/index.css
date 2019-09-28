@@ -4,7 +4,7 @@
 }
 
 .landing-top{
-    height: 75vh;
+    height: 65vh;
     background-image: linear-gradient( to bottom left, var(--main-blue), var(--main-purple), var(--main-purple));
 }
 
@@ -20,4 +20,25 @@
 
 .text-holder{
     font-family: 'Kalam', cursive; 
+}
+
+.text-holder{
+    display: block;
+    color: var(--main-purple);
+}
+
+#upper-text{
+    margin-top: 2em;
+}
+
+#upper-text-p{
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 700;
+    font-size: 1.6em;
+}
+
+#below-text-p{
+    font-weight: 500;
+    font-size: 1.2em;
+    font-family: 'Ubuntu', sans-serif;
 }

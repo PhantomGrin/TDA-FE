@@ -1,0 +1,67 @@
+:root {
+    --main-purple:#24116a;
+    --main-blue: #3ec8cf;
+    --light-blue: #63eaf1;
+}
+
+.btn {
+    font-size: 1.5em;
+    cursor: pointer;
+    position: relative;
+    border: 2px solid var(--main-blue);
+    outline: none;
+    color: var(--main-blue);
+    background-color: var(--main-purple);
+    margin: 1em;
+    font-family: 'Kalam', cursive; 
+    font-weight: 700;
+    white-space: nowrap;
+    width: 300px;
+  }
+  .btn--border:hover{
+      color: var(--light-blue);
+  }
+  .btn--border::after, .btn--border::before,
+  .btn--border span::after,
+  .btn--border span::before {
+    content: "";
+    position: absolute;
+    background-color: var(--main-blue);
+    transition: 0.5s ease;
+  }
+  .btn--border::after, .btn--border::before {
+    height: 100%;
+    width: 2px;
+    top: -2px;
+  }
+  .btn--border::after {
+    left: -2px;
+  }
+  .btn--border::before {
+    right: -2px;
+  }
+  .btn--border span::after,
+  .btn--border span::before {
+    height: 2px;
+    width: 100%;
+    left: -2px;
+  }
+  .btn--border span::after {
+    top: -2px;
+  }
+  .btn--border span::before {
+    bottom: -2px;
+  }
+  .btn--border:hover:after {
+    transform: translatex(-6px);
+  }
+  .btn--border:hover:before {
+    transform: translatex(6px);
+  }
+  .btn--border:hover span::after {
+    transform: translatey(-6px);
+  }
+  .btn--border:hover span::before {
+    transform: translatey(6px);
+  }
+  
