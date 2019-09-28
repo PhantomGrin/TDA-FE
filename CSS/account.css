@@ -1,0 +1,54 @@
+:root {
+    --main-purple:#24116a;
+    --main-blue: #3ec8cf;
+}
+body{
+    font-family: 'Raleway', sans-serif;
+}
+.column{
+}
+
+.column2{
+    text-align: center;
+    margin-top: 1em;
+    padding: 0;
+}
+
+.avatar{
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+}
+
+.btn {
+    font-size: 1em;
+    margin: auto;
+    font-family: 'Kalam', cursive; 
+    font-weight: 500;
+    width: 100%;
+}
+
+.username{
+    font-family: 'Kalam', cursive;
+    /* font-family: 'Raleway', sans-serif; */
+    font-weight: 500;
+    font-size: 3em;
+    color: var(--main-purple);
+    margin-bottom: 0 !important;
+}
+
+.content-wrap{
+    padding: 1em;
+    margin-top: 1em;
+    padding-left: 8em;
+}
+.form-wrap{
+    padding: 1em;
+    padding-top: 0;
+    margin-top: 1em;
+    padding-left: 8em;
+}
+
+.page-content{
+    margin-top: 3em;
+}
