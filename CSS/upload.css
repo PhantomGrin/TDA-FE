@@ -3,20 +3,12 @@
     --main-blue: #3ec8cf;
 }
 
-.landing-top{
-    height: 65vh;
-    background-image: linear-gradient( to bottom left, var(--main-blue), var(--main-purple), var(--main-purple));
-}
-
-#landing-page-image{
-    max-width: 100%;
+.fa-upload{
+    width: 150px;
     height: auto;
-    margin: auto;
+    color: var(--main-purple);
 }
 
-.image-holder{
-    display: inline-block;
-}
 
 .text-holder{
     display: block;
@@ -37,4 +29,8 @@
     font-weight: 500;
     font-size: 1.2em;
     font-family: 'Raleway', sans-serif;
+}
+
+.upload-icon{
+    margin-top: 5em;
 }
