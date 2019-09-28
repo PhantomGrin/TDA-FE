@@ -1,0 +1,23 @@
+:root {
+    --main-purple:#24116a;
+    --main-blue: #3ec8cf;
+}
+
+.landing-top{
+    height: 75vh;
+    background-image: linear-gradient( to bottom left, var(--main-blue), var(--main-purple), var(--main-purple));
+}
+
+#landing-page-image{
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.image-holder{
+    display: inline-block;
+}
+
+.text-holder{
+    font-family: 'Kalam', cursive; 
+}
