@@ -1,5 +1,5 @@
 :root {
-    --main-purple:#24116a;
+    --main-purple:rgb(36, 17, 106);
     --main-blue: #3ec8cf;
 }
 body{
@@ -51,4 +51,16 @@ body{
 
 .page-content{
     margin-top: 3em;
+}
+
+.input-md{
+    outline: rgba(36, 17, 106, 0.5) !important;
+    border-color: rgba(36, 17, 106, 0.5) !important;
+    font-weight: 600;
+}
+
+.input-md:focus{
+    outline: var(--main-purple) !important;
+    border-color: rgba(36, 17, 106, 0.5) !important;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(36, 17, 106, 0.5) !important;
 }
