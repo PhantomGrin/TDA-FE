@@ -11016,10 +11016,15 @@ body.sidebar-toggled footer.sticky-footer {
 }
 
 .main-page-content{
-  margin-top: 1em;
+  padding-top: 6em;
+  padding-left: 16em;
 }
 
 .main-topic{
   margin-top: 1em;
   margin-bottom: 1em;
+}
+
+#logged-details{
+  padding-left: 14em;
 }
