@@ -21,7 +21,6 @@
   <!-- ============== Resources style ============== -->
   <link rel="stylesheet" href="CSS/dashboard.css" />
   <link rel="stylesheet" href="CSS/nav.css" />
-  
 
 	<!-- ============== Fonts ============== -->
 	<link href="https://fonts.googleapis.com/css?family=Kalam:300,400,700&display=swap" rel="stylesheet">
@@ -58,7 +57,7 @@
 
       <!-- Nav Item - State-vice Summary -->
       <li class="nav-item">
-        <a class="nav-link first-link" href="#">
+        <a class="nav-link first-link" href="#state-vice">
           <i class="fas fa-file-contract"></i>
           <span>State-vice Summary</span></a>
       </li>
@@ -174,19 +173,19 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarResponsive">
               <ul class="navbar-nav ml-auto topBotomBordersOut">
-                <li class="nav-item active">
+                <li class="nav-item active nav-animation">
                   <a class="nav-link" href="#">YOUR ANALYSIS<span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item nav-animation">
                   <a class="nav-link" href="#">SHARED ANALYSIS</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item nav-animation">
                   <a class="nav-link" href="#">ACCOUNT</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item nav-animation">
                   <a class="nav-link" href="#">LOGOUT</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item nav-animation">
                   <a class="nav-link" href="#"><i class="fas fa-bell"></i></a>
                 </li>
               </ul>
@@ -199,7 +198,107 @@
         <!-- Begin Page Content -->
         <div class="container-fluid main-page-content">
           <h2>Thread Dump : <span>RE12908</span> Analysis Report</h2>
-          <h3>State-vice Summery</h3>
+
+          <!-- ============== State-vice Summary ============== -->
+          <h3 id="state-vice" class="main-topic">State-vice Summery</h3>
+
+          <div class="row">
+              <div class="col-lg-6">
+                <div class="row">
+                  <!-- Card - Total -->
+                  <div class="col-md-6 mb-4">
+                      <div class="card border-left-info shadow h-100 py-2">
+                        <div class="card-body">
+                          <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                              <div class="text-xs font-weight-bold text-info text-uppercase mb-1">TOTAL</div>
+                              <div class="h5 mb-0 font-weight-bold text-gray-800">32 Threads</div>
+                            </div>
+                            <div class="col-auto">
+                              <i class="fas fa-adjust fa-2x text-gray-300"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+        
+                    <!-- Card - Running -->
+                    <div class="col-md-6 mb-4">
+                      <div class="card border-left-success shadow h-100 py-2">
+                        <div class="card-body">
+                          <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                              <div class="text-xs font-weight-bold text-success text-uppercase mb-1">RUNNING</div>
+                              <div class="h5 mb-0 font-weight-bold text-gray-800">23 Threads</div>
+                            </div>
+                            <div class="col-auto">
+                              <i class="fas fa-running fa-2x text-gray-300"></i>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+        
+                </div>
+                <div class="row">
+
+
+                    <!-- Card - Waiting -->
+                    <div class="col-md-6 mb-4">
+                        <div class="card border-left-warning shadow h-100 py-2">
+                          <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                              <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">WAITING</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">4 Threads</div>
+                              </div>
+                              <div class="col-auto">
+                                <i class="far fa-pause-circle fa-2x text-gray-300"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+        
+                      <!-- Card - Blocked -->
+                      <div class="col-md-6 mb-4">
+                        <div class="card border-left-danger shadow h-100 py-2">
+                          <div class="card-body">
+                            <div class="row no-gutters align-items-center">
+                              <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">BLOCKED</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">5 Threads</div>
+                              </div>
+                              <div class="col-auto">
+                                <i class="fas fa-lock fa-2x text-gray-300"></i>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                </div>
+              </div>
+              <div class="col-lg-6">
+                  <div class="chart-wrap"><canvas id="myChart" width="500" height="300"></canvas></div>
+              </div>
+  
+            </div>
+
+          <!-- ============== Culprit Report ============== -->
+          <h3 id="culprit-report" class="main-topic">Culprit Report</h3>
+
+          <!-- ============== Daemon vs Non-Daemon ============== -->
+          <h3 id="culprit-report" class="main-topic">Daemon vs Non-Daemon</h3>
+
+          <!-- ============== GC vs Non-GC ============== -->
+          <h3 id="culprit-report" class="main-topic">GC vs Non-GC</h3>
+
+          <!-- ============== Identical StackTrace ============== -->
+          <h3 id="culprit-report" class="main-topic">Identical StackTrace</h3>
+
+          <!-- ============== Stack Length ============== -->
+          <h3 id="culprit-report" class="main-topic">Stack Length</h3>
 
         </div>
         <!-- /.container-fluid -->
@@ -247,11 +346,21 @@
     </div>
   </div>
 
+  <!-- ============== Chart JS ============== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js" integrity="sha256-arMsf+3JJK2LoTGqxfnuJPFTU4hAK57MtIPdFpiHXOU=" crossorigin="anonymous"></script>
+  
   <!-- ============== Bootstrap 4.0 JavaScripts ============== -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	
+  
+  <script type="text/javascript" src="JS/charts.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      drawChart();
+    });
+  </script>
+
 
 </body>
 

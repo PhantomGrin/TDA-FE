@@ -25,7 +25,7 @@
 }
 
 /* Top and Bottom borders go out */
-li.nav-item a:before, li.nav-item a:after
+li.nav-animation a:before, li.nav-animation a:after
 {
     position: absolute;
     left: 0px;
@@ -37,19 +37,19 @@ li.nav-item a:before, li.nav-item a:after
     transition: all 0.3s;
 }
 
-li.nav-item a:before
+li.nav-animation a:before
 {
     top: 0px;
     transform: translateY(10px);
 }
 
-li.nav-item a:after
+li.nav-animation a:after
 {
     bottom: 0px;
     transform: translateY(-10px);
 }
 
-li.nav-item a:hover:before, li.nav-item a:hover:after
+li.nav-animation a:hover:before, li.nav-animation a:hover:after
 {
     opacity: 1;
     transform: translateY(0px);

@@ -11018,3 +11018,8 @@ body.sidebar-toggled footer.sticky-footer {
 .main-page-content{
   margin-top: 1em;
 }
+
+.main-topic{
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
