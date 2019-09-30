@@ -71,3 +71,12 @@ li.nav-animation a:hover:before, li.nav-animation a:hover:after
     width: 150px;
     height: auto;
 }
+
+.top-navbar{
+    background-color: white;
+    z-index: 1;
+}
+
+.side-navbar{
+    z-index: 10;
+}
