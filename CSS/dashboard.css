@@ -11028,3 +11028,11 @@ body.sidebar-toggled footer.sticky-footer {
 #logged-details{
   padding-left: 14em;
 }
+
+.bg-purple{
+  background-color: var(--main-purple);
+}
+
+.text-label-d{
+  display: inline-block;
+}

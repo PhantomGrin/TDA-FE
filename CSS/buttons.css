@@ -65,3 +65,7 @@
     transform: translatey(6px);
   }
   
+#sample{
+  background: none;
+  background-color: var(--main-purple) !important;
+}
