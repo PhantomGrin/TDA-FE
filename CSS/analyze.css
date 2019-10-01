@@ -1,0 +1,83 @@
+body{
+    color: rgb(78, 78, 78);
+}
+input.form-control{
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-right: 0.5em;
+}
+input.form-control:focus,
+input.form-control:active{
+    outline: var(--main-purple) !important;
+    border-color: rgba(36, 17, 106, 0.5) !important;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(36, 17, 106, 0.5) !important;
+}
+
+a.page-link:active{
+    outline: var(--main-purple) !important;
+    background-color: var(--main-purple) !important;
+    border-color: rgba(36, 17, 106, 0.5) !important;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(36, 17, 106, 0.5) !important;
+    color: #fff;
+}
+a.page-link:focus{
+    outline: none !important;
+    background-color: none !important;
+    border-color: none !important;
+    box-shadow:  none !important;
+}
+
+.page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color:  var(--main-purple) !important;
+    border-color:  var(--main-purple) !important;
+}
+
+.page-link{
+    color:  var(--main-purple);
+}
+
+.page-link:hover{
+    background-color: rgba(36, 17, 106, 0.2);
+    border-color: rgba(36, 17, 106, 0.2);
+    color: var(--main-purple);
+}
+
+th{
+    color: var(--main-purple);
+}
+
+.option-button-group{
+   margin: 0 auto;
+}
+
+td{
+    min-width: 123px;
+}
+
+.option-buttons i{
+    color: var(--main-purple);
+}
+
+.option-buttons{
+    border-radius: 50%;
+    box-shadow: none !important;
+    border: 1px solid var(--main-purple) !important;
+    outline: var(--main-purple) !important;
+    padding: 0.2em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    background: transparent;
+}
+
+.option-buttons:hover{
+    background-color: rgba(36, 17, 106, 0.2);
+    border-color: rgba(36, 17, 106, 0.2);
+    color: var(--main-purple);
+}
+
+#page-title{
+    padding-left:11%;
+    margin-bottom: 1em;
+}

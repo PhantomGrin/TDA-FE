@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Thread Heros</title>
+	<meta name="description" content="Secure, Feature-rich, Collaborative way to analyze your Thread Dumps">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="savindi">
+
+	<!-- ================= Favicon ================== -->
+	<link rel="shortcut icon" href="images/favicon.png">
+
+	<!-- ============== Bootstrap 4.0 ============== -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	
+	<!-- ============== Font Awesome ============== -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+	
+	<!-- ============== DataTable ============== -->
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/w/bs4/dt-1.10.18/datatables.min.css"/>
+	
+	<!-- ============== Resources style ============== -->
+	<link rel="stylesheet" href="CSS/nav.css" />
+	<link rel="stylesheet" href="CSS/buttons.css" />
+	<link rel="stylesheet" href="CSS/dashboard.css" />
+	<link rel="stylesheet" href="CSS/analyze.css" />
+	<link rel="stylesheet" href="CSS/shared.css" />
+
+	<!-- ============== Fonts ============== -->
+	<link href="https://fonts.googleapis.com/css?family=Kalam:300,400,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class="container-fluid">
+
+		<!-- ============== NavBar ============== -->
+		<nav class="navbar navbar-expand-lg static-top">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">
+					<img class="brand-logo" src="images/LogoColoured.png" alt="Logo">
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto topBotomBordersOut">
+					<li class="nav-item active nav-animation">
+						<a class="nav-link" href="#">YOUR ANALYSIS<span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item nav-animation">
+						<a class="nav-link" href="#">SHARED ANALYSIS</a>
+					</li>
+					<li class="nav-item nav-animation">
+						<a class="nav-link" href="#">ACCOUNT</a>
+					</li>
+					<li class="nav-item nav-animation">
+						<a class="nav-link" href="#">LOGOUT</a>
+					</li>
+					<li class="nav-item nav-animation">
+						<a class="nav-link" href="#"><i class="fas fa-bell"></i></a>
+					</li>
+				</ul>
+				</div>
+			</div>
+		</nav>	
+
+		<!-- ============== Page Content ============== -->
+		<div class="row"><h3 id="page-title" class="text-gray-600">Shared Analysis</h3></div>
+		<div class="row justify-content-center">
+			<!-- DataTales Example -->
+			<div class="card shadow mb-4">
+				<!-- <div class="card-header py-3">
+					<h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+				</div> -->
+				<div class="card-body">
+					<div class="table-responsive">
+					<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+						<thead>
+						<tr>
+							<th>Name</th>
+							<th>Analysis Date</th>
+							<th>Dump Date</th>
+							<th>Issues</th>
+							<th>Options</th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr>
+							<td>Tiger Nixon</td>
+							<td>2011/04/25</td>
+							<td>2011/04/25</td>
+							<td>aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in </td>
+							<td class="button-group-wrapper justify-content-center justify-content-md-center">
+								<div class="joption-button-group ustify-content-center justify-content-md-center">
+									<button class="option-buttons view-analysis-button" data-toggle="tooltip" data-placement="top" title="View Analysis"><i class="fas fa-external-link-alt"></i></button>
+									
+									<button class="option-buttons delete-analysis-button" data-toggle="tooltip" data-placement="top" title="Delete Analysis"><i class="fas fa-trash"></i></button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Garrett Winters</td>
+							<td>2009/01/12</td>
+							<td>2009/01/12</td>
+							<td>aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in </td>
+							<td class="button-group-wrapper justify-content-center justify-content-md-center">
+								<div class="joption-button-group ustify-content-center justify-content-md-center">
+									<button class="option-buttons view-analysis-button" data-toggle="tooltip" data-placement="top" title="View Analysis"><i class="fas fa-external-link-alt"></i></button>
+									
+									<button class="option-buttons delete-analysis-button" data-toggle="tooltip" data-placement="top" title="Delete Analysis"><i class="fas fa-trash"></i></button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Ashton Cox</td>
+							<td>2012/03/29</td>
+							<td>2012/03/29</td>
+							<td>aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in </td>
+							<td class="button-group-wrapper justify-content-center justify-content-md-center">
+								<div class="joption-button-group ustify-content-center justify-content-md-center">
+									<button class="option-buttons view-analysis-button" data-toggle="tooltip" data-placement="top" title="View Analysis"><i class="fas fa-external-link-alt"></i></button>
+									
+									<button class="option-buttons delete-analysis-button" data-toggle="tooltip" data-placement="top" title="Delete Analysis"><i class="fas fa-trash"></i></button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Cedric Kelly</td>
+							<td>2008/11/28</td>
+							<td>2008/11/28</td>
+							<td>aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in </td>
+							<td class="button-group-wrapper justify-content-center justify-content-md-center">
+								<div class="joption-button-group ustify-content-center justify-content-md-center">
+									<button class="option-buttons view-analysis-button" data-toggle="tooltip" data-placement="top" title="View Analysis"><i class="fas fa-external-link-alt"></i></button>
+									
+									<button class="option-buttons delete-analysis-button" data-toggle="tooltip" data-placement="top" title="Delete Analysis"><i class="fas fa-trash"></i></button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Airi Satou</td>
+							<td>2008/11/28</td>
+							<td>2008/11/28</td>
+							<td>aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in </td>
+							<td class="button-group-wrapper justify-content-center justify-content-md-center">
+								<div class="joption-button-group ustify-content-center justify-content-md-center">
+									<button class="option-buttons view-analysis-button" data-toggle="tooltip" data-placement="top" title="View Analysis"><i class="fas fa-external-link-alt"></i></button>
+									
+									<button class="option-buttons delete-analysis-button" data-toggle="tooltip" data-placement="top" title="Delete Analysis"><i class="fas fa-trash"></i></button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Brielle Williamson</td>
+							<td>2008/11/28</td>
+							<td>2008/11/28</td>
+							<td>aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in </td>
+							<td class="button-group-wrapper justify-content-center justify-content-md-center">
+								<div class="joption-button-group ustify-content-center justify-content-md-center">
+									<button class="option-buttons view-analysis-button" data-toggle="tooltip" data-placement="top" title="View Analysis"><i class="fas fa-external-link-alt"></i></button>
+									
+									<button class="option-buttons delete-analysis-button" data-toggle="tooltip" data-placement="top" title="Delete Analysis"><i class="fas fa-trash"></i></button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Herrod Chandler</td>
+							<td>2008/11/28</td>
+							<td>2008/11/28</td>
+							<td>aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in </td>
+							<td class="button-group-wrapper justify-content-center justify-content-md-center">
+								<div class="joption-button-group ustify-content-center justify-content-md-center">
+									<button class="option-buttons view-analysis-button" data-toggle="tooltip" data-placement="top" title="View Analysis"><i class="fas fa-external-link-alt"></i></button>
+									
+									<button class="option-buttons delete-analysis-button" data-toggle="tooltip" data-placement="top" title="Delete Analysis"><i class="fas fa-trash"></i></button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Rhona Davidson</td>
+							<td>2008/11/28</td>
+							<td>2008/11/28</td>
+							<td>aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in </td>
+							<td class="button-group-wrapper justify-content-center justify-content-md-center">
+								<div class="joption-button-group ustify-content-center justify-content-md-center">
+									<button class="option-buttons view-analysis-button" data-toggle="tooltip" data-placement="top" title="View Analysis"><i class="fas fa-external-link-alt"></i></button>
+									
+									<button class="option-buttons delete-analysis-button" data-toggle="tooltip" data-placement="top" title="Delete Analysis"><i class="fas fa-trash"></i></button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Colleen Hurst</td>
+							<td>2008/11/28</td>
+							<td>2008/11/28</td>
+							<td>aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in </td>
+							<td class="button-group-wrapper justify-content-center justify-content-md-center">
+								<div class="joption-button-group ustify-content-center justify-content-md-center">
+									<button class="option-buttons view-analysis-button" data-toggle="tooltip" data-placement="top" title="View Analysis"><i class="fas fa-external-link-alt"></i></button>
+									
+									<button class="option-buttons delete-analysis-button" data-toggle="tooltip" data-placement="top" title="Delete Analysis"><i class="fas fa-trash"></i></button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Sonya Frost</td>
+							<td>2008/11/28</td>
+							<td>2008/11/28</td>
+							<td>aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in </td>
+							<td class="button-group-wrapper justify-content-center justify-content-md-center">
+								<div class="joption-button-group ustify-content-center justify-content-md-center">
+									<button class="option-buttons view-analysis-button" data-toggle="tooltip" data-placement="top" title="View Analysis"><i class="fas fa-external-link-alt"></i></button>
+									
+									<button class="option-buttons delete-analysis-button" data-toggle="tooltip" data-placement="top" title="Delete Analysis"><i class="fas fa-trash"></i></button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Tiger Nixon</td>
+							<td>2011/04/25</td>
+							<td>2011/04/25</td>
+							<td>aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in </td>
+							<td class="button-group-wrapper justify-content-center justify-content-md-center">
+								<div class="joption-button-group ustify-content-center justify-content-md-center">
+									<button class="option-buttons view-analysis-button" data-toggle="tooltip" data-placement="top" title="View Analysis"><i class="fas fa-external-link-alt"></i></button>
+									
+									<button class="option-buttons delete-analysis-button" data-toggle="tooltip" data-placement="top" title="Delete Analysis"><i class="fas fa-trash"></i></button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Garrett Winters</td>
+							<td>2009/01/12</td>
+							<td>2009/01/12</td>
+							<td>aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in </td>
+							<td class="button-group-wrapper justify-content-center justify-content-md-center">
+								<div class="joption-button-group ustify-content-center justify-content-md-center">
+									<button class="option-buttons view-analysis-button" data-toggle="tooltip" data-placement="top" title="View Analysis"><i class="fas fa-external-link-alt"></i></button>
+									
+									<button class="option-buttons delete-analysis-button" data-toggle="tooltip" data-placement="top" title="Delete Analysis"><i class="fas fa-trash"></i></button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Ashton Cox</td>
+							<td>2012/03/29</td>
+							<td>2012/03/29</td>
+							<td>aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in </td>
+							<td class="button-group-wrapper justify-content-center justify-content-md-center">
+								<div class="joption-button-group ustify-content-center justify-content-md-center">
+									<button class="option-buttons view-analysis-button" data-toggle="tooltip" data-placement="top" title="View Analysis"><i class="fas fa-external-link-alt"></i></button>
+									
+									<button class="option-buttons delete-analysis-button" data-toggle="tooltip" data-placement="top" title="Delete Analysis"><i class="fas fa-trash"></i></button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Cedric Kelly</td>
+							<td>2008/11/28</td>
+							<td>2008/11/28</td>
+							<td>aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in </td>
+							<td class="button-group-wrapper justify-content-center justify-content-md-center">
+								<div class="joption-button-group ustify-content-center justify-content-md-center">
+									<button class="option-buttons view-analysis-button" data-toggle="tooltip" data-placement="top" title="View Analysis"><i class="fas fa-external-link-alt"></i></button>
+									
+									<button class="option-buttons delete-analysis-button" data-toggle="tooltip" data-placement="top" title="Delete Analysis"><i class="fas fa-trash"></i></button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Airi Satou</td>
+							<td>2008/11/28</td>
+							<td>2008/11/28</td>
+							<td>aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in </td>
+							<td class="button-group-wrapper justify-content-center justify-content-md-center">
+								<div class="joption-button-group ustify-content-center justify-content-md-center">
+									<button class="option-buttons view-analysis-button" data-toggle="tooltip" data-placement="top" title="View Analysis"><i class="fas fa-external-link-alt"></i></button>
+									
+									<button class="option-buttons delete-analysis-button" data-toggle="tooltip" data-placement="top" title="Delete Analysis"><i class="fas fa-trash"></i></button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Brielle Williamson</td>
+							<td>2008/11/28</td>
+							<td>2008/11/28</td>
+							<td>aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in </td>
+							<td class="button-group-wrapper justify-content-center justify-content-md-center">
+								<div class="joption-button-group ustify-content-center justify-content-md-center">
+									<button class="option-buttons view-analysis-button" data-toggle="tooltip" data-placement="top" title="View Analysis"><i class="fas fa-external-link-alt"></i></button>
+									
+									<button class="option-buttons delete-analysis-button" data-toggle="tooltip" data-placement="top" title="Delete Analysis"><i class="fas fa-trash"></i></button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Herrod Chandler</td>
+							<td>2008/11/28</td>
+							<td>2008/11/28</td>
+							<td>aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in </td>
+							<td class="button-group-wrapper justify-content-center justify-content-md-center">
+								<div class="joption-button-group ustify-content-center justify-content-md-center">
+									<button class="option-buttons view-analysis-button" data-toggle="tooltip" data-placement="top" title="View Analysis"><i class="fas fa-external-link-alt"></i></button>
+									
+									<button class="option-buttons delete-analysis-button" data-toggle="tooltip" data-placement="top" title="Delete Analysis"><i class="fas fa-trash"></i></button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Rhona Davidson</td>
+							<td>2008/11/28</td>
+							<td>2008/11/28</td>
+							<td>aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in </td>
+							<td class="button-group-wrapper justify-content-center justify-content-md-center">
+								<div class="joption-button-group ustify-content-center justify-content-md-center">
+									<button class="option-buttons view-analysis-button" data-toggle="tooltip" data-placement="top" title="View Analysis"><i class="fas fa-external-link-alt"></i></button>
+									
+									<button class="option-buttons delete-analysis-button" data-toggle="tooltip" data-placement="top" title="Delete Analysis"><i class="fas fa-trash"></i></button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Colleen Hurst</td>
+							<td>2008/11/28</td>
+							<td>2008/11/28</td>
+							<td>aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in </td>
+							<td class="button-group-wrapper justify-content-center justify-content-md-center">
+								<div class="joption-button-group ustify-content-center justify-content-md-center">
+									<button class="option-buttons view-analysis-button" data-toggle="tooltip" data-placement="top" title="View Analysis"><i class="fas fa-external-link-alt"></i></button>
+									
+									<button class="option-buttons delete-analysis-button" data-toggle="tooltip" data-placement="top" title="Delete Analysis"><i class="fas fa-trash"></i></button>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>Sonya Frost</td>
+							<td>2008/11/28</td>
+							<td>2008/11/28</td>
+							<td>aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in </td>
+							<td class="button-group-wrapper justify-content-center justify-content-md-center">
+								<div class="joption-button-group ustify-content-center justify-content-md-center">
+									<button class="option-buttons view-analysis-button" data-toggle="tooltip" data-placement="top" title="View Analysis"><i class="fas fa-external-link-alt"></i></button>
+									
+									<button class="option-buttons delete-analysis-button" data-toggle="tooltip" data-placement="top" title="Delete Analysis"><i class="fas fa-trash"></i></button>
+								</div>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+					</div>
+				</div>
+				</div>
+		</div>
+
+	</div>
+	
+	
+	<!-- ============== Bootstrap 4.0 JavaScripts ============== -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	
+	<!-- Page level plugins -->
+	<script type="text/javascript" src="https://cdn.datatables.net/w/bs4/dt-1.10.18/datatables.min.js"></script>
+  
+	<!-- Page level custom scripts -->
+	<script src="JS/datatables.js"></script>
+</body>
+</html>
