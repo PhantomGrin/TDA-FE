@@ -28,7 +28,7 @@
   --font-family-sans-serif: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
-  --main-purple:#24116a;
+  --main-purple:rgb(36, 17, 106);
   --main-blue: #3ec8cf;
 }
 
@@ -11031,6 +11031,18 @@ body.sidebar-toggled footer.sticky-footer {
 
 .bg-purple{
   background-color: var(--main-purple);
+}
+
+.text-purple{
+  color: var(--main-purple);
+}
+
+.bg-blue{
+  background-color: var(--main-blue);
+}
+
+.text-blue{
+  color: var(--main-blue);
 }
 
 .text-label-d{

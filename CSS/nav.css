@@ -80,3 +80,8 @@ li.nav-animation a:hover:before, li.nav-animation a:hover:after
 .side-navbar{
     z-index: 10;
 }
+
+li.active{
+    border-bottom: 3px solid var(--main-purple);
+    padding-bottom: 0.1em;
+}
