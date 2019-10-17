@@ -261,7 +261,7 @@ input {
     padding: 2em;
 }
 
-#sample{
+#try-sample{
     background: none;
     background-color: var(--main-purple) !important;
     font-family: 'Raleway', sans-serif;

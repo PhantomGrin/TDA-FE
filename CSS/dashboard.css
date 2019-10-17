@@ -11048,3 +11048,15 @@ body.sidebar-toggled footer.sticky-footer {
 .text-label-d{
   display: inline-block;
 }
+
+.detail-parah{
+  margin-bottom: 0.2rem !important;
+}
+
+#culprit-report{
+  margin-bottom: 0 !important;
+}
+
+#state-table-wrap{
+  margin-top: 1.5em !important;
+}
