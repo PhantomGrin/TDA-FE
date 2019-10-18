@@ -5,7 +5,7 @@ $("#try-sample").click(function (e){
     fetch(url)
     .then(response => response.text())
     .then(data => {
-        // console.log(data);
+        console.log(data);
         analyze_sample(data);
     })
     .catch(error => console.error(error));
@@ -16,8 +16,14 @@ function analyze_sample(data){
     const url = "http://localhost:8080/trysample"
     var formData  = new FormData();
     formData.append('text',data)
+
+    var token = JSON.parse(localStorage.getItem('token'));
+
     fetch(url, {
         method:"POST",
+        headers: {
+            "Authorization": "Bearer "+ token['token']
+        },
         body: formData
     })
     .then(response => response.json())

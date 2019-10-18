@@ -35,6 +35,12 @@
                 <!-- Form -->
                 <div class="container" id="container">
                     <div class="form-container sign-up-container">
+                        <div id="reg-alert" class="alert alert-danger alert-dismissible fade show hidden-alert" role="alert">
+                            <strong>Error in Register!</strong> <span id="reg-error">You should check in on some of those fields below.</span>
+                            <button id="reg-close" type="button" class="close" data-dismiss="" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
                         <form action="#">
                             <h1>Create Account</h1>
                             <!-- <div class="social-container">
@@ -43,14 +49,22 @@
                                 <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                             </div>
                             <span>or use your email for registration</span> -->
-                            <input type="text" placeholder="Name" />
-                            <input type="email" placeholder="Email" />
-                            <input type="text" placeholder="Team" />
-                            <input type="password" placeholder="Password" />
-                            <button>Sign Up</button>
+                            <input id="form-fname" type="text" placeholder="First Name" />
+                            <input id="form-lname" type="text" placeholder="Last Name" />
+                            <input id="form-email" type="email" placeholder="Email" />
+                            <input id="form-team" type="text" placeholder="Team" />
+                            <input id="form-password" type="password" placeholder="Password" />
+                            <input id="form-repassword" type="password" placeholder="Re-enter Password" />
+                            <button id="register-button">Sign Up</button>
                         </form>
                     </div>
                     <div class="form-container sign-in-container">
+                        <div id="login-alert" class="alert alert-danger alert-dismissible fade show hidden-alert" role="alert">
+                            <strong>Error in Login!</strong> <span id="login-error">You should check in on some of those fields below.</span> 
+                            <button id="login-close" type="button" class="close" data-dismiss="" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
                         <form action="#">
                             <h1>Sign in</h1>
                             <!-- <div class="social-container">
@@ -59,10 +73,10 @@
                                 <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                             </div>
                             <span>or use your account</span> -->
-                            <input type="email" placeholder="Email" />
-                            <input type="password" placeholder="Password" />
+                            <input id="login-user" type="email" placeholder="Email" required />
+                            <input id="login-password" type="password" placeholder="Password" required/>
                             <a href="#">Forgot your password?</a>
-                            <button>Sign In</button>
+                            <button id="login-button">Sign In</button>
                         </form>
                     </div>
                     <div class="overlay-container">
@@ -109,9 +123,11 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="JS/signinup.js"></script>
-	<script src="JS/default_functions.js"></script>
-	
+    
+    <!-- ============== Custom JavaScripts ============== -->
+    <script type="text/javascript" src="JS/signinup.js"></script>
+    <script type="text/javascript" src="JS/default_functions.js"></script>
+    <script type="text/javascript" src="JS/user_control_functions.js"></script>
 	
 </body>
 </html>
