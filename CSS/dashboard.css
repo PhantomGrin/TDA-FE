@@ -11002,19 +11002,6 @@ body.sidebar-toggled footer.sticky-footer {
   margin-bottom: 1em;
 }
 
-.display-avatar{
-  width: 50px;
-  height: auto;
-  border-radius: 50%;
-  display: inline-block;
-  margin: 0.5em;
-}
-
-.display-name{
-  display: inline-block;
-  margin: 0.5em;
-}
-
 .main-page-content{
   padding-top: 6em;
   padding-left: 16em;
