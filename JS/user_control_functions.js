@@ -28,8 +28,10 @@ $("#register-button").click(function (e){
             registerUser(fname, lname, email, team, password);
         }
     }else{
+        document.getElementById("reg-strong").innerHTML = "Error in Register!: ";
         document.getElementById("reg-error").innerHTML = "Invalid inputs. Please Correct & Try again";
-        document.getElementById("reg-alert").classList.remove("hidden-alert");
+        document.getElementById("reg-alert").classList.remove("alert-info");
+        document.getElementById("reg-alert").classList.add("alert-danger");
         throw new Error('Something went wrong');
     }  
 });
@@ -58,8 +60,10 @@ function registerUser(fname, lname, email, team, password){
         if (response.status == 201) {
             loginUser(email, password);
         } else{
-            document.getElementById("login-error").innerHTML = "Something went wrong. Please Try again";
-            document.getElementById("login-alert").classList.remove("hidden-alert");
+            document.getElementById("reg-strong").innerHTML = "Error in Register!: ";
+            document.getElementById("reg-error").innerHTML = "Something went wrong. Please Try again";
+            document.getElementById("reg-alert").classList.remove("alert-info");
+            document.getElementById("reg-alert").classList.add("alert-danger");
             throw new Error('Something went wrong');
         }
     })
