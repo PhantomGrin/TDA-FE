@@ -99,3 +99,7 @@ li.active{
     display: inline-block;
     margin: 0.5em;
 }
+
+.navbar-expand-lg{
+    min-height: 82px;
+}

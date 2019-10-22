@@ -1,3 +1,15 @@
+var username;
+
+$(document).ready(function(){
+    try {
+        username = JSON.parse(localStorage.getItem('username'));
+        document.getElementById("display-name").innerHTML = username;
+    } catch (error) {
+        console.log("Username not set")
+        document.getElementById("display-name").innerHTML = "Undefined";
+    }
+});
+
 $("#chose-dump").click(function(e) {
     e.preventDefault();
     $("#dump-file").click();
@@ -42,7 +54,7 @@ $("#upload-dump").click(function(e) {
         if (response.ok) {
             return response.json();
         } else if (response.status == 401){
-            //Login again. Credentials Expired
+            //Login again. Credentials Expired or Wrong Credentials
             throw new Error('Something went wrong');
         } else{
             //Server Error
@@ -52,6 +64,7 @@ $("#upload-dump").click(function(e) {
     .then(data => {
         console.log("received");
         console.log(data);
+        localStorage.setItem("analysis_data", JSON.stringify(data));
         window.location.href = "dashboard.html";
     })
     .catch(error => console.error(error));

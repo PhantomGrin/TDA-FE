@@ -22,7 +22,6 @@
 	<!-- ============== Resources style ============== -->
 	<link rel="stylesheet" href="CSS/nav.css" />
 	<link rel="stylesheet" href="CSS/buttons.css" />
-	<link rel="stylesheet" href="CSS/dashboard.css" />
 	<link rel="stylesheet" href="CSS/analyze.css" />
 
 	<!-- ============== Fonts ============== -->
@@ -40,6 +39,10 @@
 				<a class="navbar-brand" href="#">
 					<img class="brand-logo" src="images/LogoColoured.png" alt="Logo">
 				</a>
+				<div id="logged-details">
+					<img class="display-avatar" src="images/avatar.jpg" alt="avatar">
+					<p class="display-name" id="display-name">savindi.wijenayaka@gmail.com</p>
+				</div>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
 				</button>
@@ -361,10 +364,11 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	
-	<!-- Page level plugins -->
+	<!-- ============== DataTable Library ============== -->
 	<script type="text/javascript" src="https://cdn.datatables.net/w/bs4/dt-1.10.18/datatables.min.js"></script>
   
-	<!-- Page level custom scripts -->
-	<script src="JS/datatables.js"></script>
+	<!-- ============== Custom JavaScripts ============== -->
+	<script type="text/javascript" src="JS/datatables.js"></script>
+	<script type="text/javascript" src="JS/shared.js"></script>
 </body>
 </html>

@@ -1,3 +1,7 @@
 td{
     min-width: 75px;
 }
+
+#logged-details{
+    padding-left: 3rem;
+}

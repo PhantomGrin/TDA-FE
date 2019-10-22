@@ -1,5 +1,5 @@
-var analysis_data = JSON.parse(localStorage.getItem('analysis_data'));
-console.log(analysis_data);
+var analysis_data;
+var sampleFlag;
     
 var colorBG = [
     'rgba(23, 162, 184, 0.3)',
@@ -15,8 +15,25 @@ var colorBorder = [
 ];
 
 $(document).ready(function(){
+    try {
+        analysis_data = JSON.parse(localStorage.getItem('analysis_data'));
+        sampleFlag = JSON.parse(localStorage.getItem('sample'));
+        username = JSON.parse(localStorage.getItem('username'));
+    } catch (error) {
+        console.log(error)
+    }
+    
+    if(sampleFlag == true){
+        document.getElementById("sample-clear").innerHTML = '<p id="reg-now"> REGISTER TO RECEIVE FULL FUNCTIONALITY </p>';
+        document.getElementById("link-home").setAttribute("href","index.html");
+    }else{
+        document.getElementById("display-name").innerHTML = username;
+    }
+
     if(analysis_data != undefined){
         display_analysis(analysis_data);
+    }else{
+        document.getElementById("thread-dump-title").innerHTML = 'ERROR IN DUMP FILE : CANNOT ANALYZE';
     }
 });
 

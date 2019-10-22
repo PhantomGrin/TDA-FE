@@ -11047,3 +11047,12 @@ body.sidebar-toggled footer.sticky-footer {
 #state-table-wrap{
   margin-top: 1.5em !important;
 }
+
+#reg-now{
+  justify-content: center;
+  padding-left: 10em;
+  font-size: 1.5em;
+  color: var(--main-purple);
+  margin: auto;
+  font-weight: 800;
+}

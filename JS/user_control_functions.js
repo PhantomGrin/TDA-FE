@@ -85,6 +85,7 @@ function loginUser(username, password){
     })
     .then(response => {
         if (response.ok) {
+            localStorage.setItem('sample', 'false');
             return response.json();
         } else if (response.status == 401){
             document.getElementById("login-error").innerHTML = "Invalid Credentials. Check your Email and Password";
