@@ -101,7 +101,8 @@ function loginUser(username, password){
         console.log(data);
         localStorage.setItem("token", JSON.stringify(data));
         localStorage.setItem("username", JSON.stringify(username));
-        window.location.href = "upload.html";
+        getUserDetails();
+        // window.location.href = "upload.html";
     })
     .catch(error => console.error(error))
 }
@@ -143,6 +144,32 @@ function validatePassword(password){
     } else{
         return true;
     }
+}
+
+function getUserDetails(){
+    const url = "http://localhost:8080/user";
+    var token = JSON.parse(localStorage.getItem('token'));
+
+    console.log(token['token']);
+    
+    fetch(url, {
+        method:"GET",
+        headers: {
+            "Authorization": "Bearer "+ token['token']
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        } else{
+            throw new Error('Something went wrong');
+        }
+    })
+    .then(data => {
+        console.log(data);
+        localStorage.setItem("user_details", JSON.stringify(data));
+    })
+    .catch(error => console.error(error))
 }
 
 $("#login-close").click(function(e){
