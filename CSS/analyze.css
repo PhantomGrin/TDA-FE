@@ -85,3 +85,27 @@ td{
 #logged-details{
     padding-left: 3rem;
 }
+
+#btn-choice {
+    border: 1px solid grey !important;
+    color: black !important;
+    background-color: #fff;
+}
+
+.display-username{
+    color: rgb(73, 73, 73);
+    font-size: 0.8em;
+}
+
+.hidden-alert{
+	visibility: hidden;
+}
+
+.alert{
+    display: inline-block;
+    margin-left: 1em;
+}
+
+.dropdown{
+    display: inline-block;
+}
