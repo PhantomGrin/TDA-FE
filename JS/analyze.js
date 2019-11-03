@@ -28,7 +28,7 @@ function displayPreviousAnalysis(array){
                 '<tr>'+
                     '<td class="id-data">'+ threadDumpObject["threadId"] +'</td>'+
                     '<td>'+ threadDumpObject["name"] +'</td>'+
-                    '<td>'+ threadDumpObject["date"] +'</td>'+
+                    '<td>'+ threadDumpObject["analysisDate"] +'</td>'+
                     '<td>'+ threadDumpObject["date"] + '</td>'+
                     '<td class="button-group-wrapper justify-content-center justify-content-md-center">'+
                         '<div class="joption-button-group ustify-content-center justify-content-md-center">'+

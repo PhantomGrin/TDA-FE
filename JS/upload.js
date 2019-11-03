@@ -8,8 +8,6 @@ $(document).ready(function(){
         function getUserDetails(){
             const url = "http://localhost:8080/user";
             var token = JSON.parse(localStorage.getItem('token'));
-        
-            console.log(token['token']);
             
             fetch(url, {
                 method:"GET",
@@ -25,7 +23,6 @@ $(document).ready(function(){
                 }
             })
             .then(data => {
-                console.log(data);
                 localStorage.setItem("user_details", JSON.stringify(data));
             })
             .catch(error => console.error(error))
@@ -36,8 +33,31 @@ $(document).ready(function(){
         function getAnalysis(){
             const url = "http://localhost:8080/getanalysis";
             var token = JSON.parse(localStorage.getItem('token'));
-        
-            console.log(token['token']);
+            
+            fetch(url, {
+                method:"GET",
+                headers: {
+                    "Authorization": "Bearer "+ token['token']
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else{
+                    throw new Error('Something went wrong');
+                }
+            })
+            .then(data => {
+                localStorage.setItem("old_analysis", JSON.stringify(data));
+            })
+            .catch(error => console.error(error))
+        }
+
+        getAnalysis();
+
+        function getSharedAnalysis(){
+            const url = "http://localhost:8080/shared";
+            var token = JSON.parse(localStorage.getItem('token'));
             
             fetch(url, {
                 method:"GET",
@@ -54,12 +74,12 @@ $(document).ready(function(){
             })
             .then(data => {
                 console.log(data);
-                localStorage.setItem("old_analysis", JSON.stringify(data));
+                localStorage.setItem("shared_analysis", JSON.stringify(data));
             })
             .catch(error => console.error(error))
         }
 
-        getAnalysis();
+        getSharedAnalysis();
     } catch (error) {
         console.log("Username not set")
         document.getElementById("display-name").innerHTML = "Undefined";
