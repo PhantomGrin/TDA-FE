@@ -67,12 +67,12 @@
 				<div class="col-sm-4 col-md-4 col-lg-3 column">
 					<div class="row justify-content-center">
 						<div class="col-12 col-sm-12 justify-content-center column2"> <img class="avatar" src="images/avatar.jpg" alt="Avatar"></div>
-						<div class="col-6 col-sm-12 column2"> <button class="btn btn--border">Edit Profile<span></span></button></div>
+						<div class="col-6 col-sm-12 column2"> <button id="edit-user" class="btn btn--border">Edit Profile<span></span></button></div>
 						<div class="col-6 col-sm-12 column2"> <button class="btn btn--border">Reset Password<span></span></button></div>
 					</div>
 				</div>
 				<div class="col-sm-8 col-md-8 col-lg-9 column">
-					<div class="row content-wrap"><p class="username">Hello Savindi!</p></div>
+					<div class="row content-wrap"><p class="username">Hello <span id="hello-user">Savindi</span>!</p></div>
 					<div class="form-wrap">
 						<form class="form-horizontal">
 							<fieldset>								
@@ -80,7 +80,7 @@
 								<div class="row form-group">
 									<label class="col-md-4 control-label" for="fname">First Name</label>  
 									<div class="col-md-6">
-									<input id="fname" name="fname" type="text" placeholder="First Name" value="Savindi" class="form-control input-md" required="" disabled>
+									<input id="fname" name="fname" type="text" placeholder="First Name" value="None" class="form-control input-md" required="" disabled>
 									
 									</div>
 								</div>
@@ -89,7 +89,7 @@
 								<div class="row form-group">
 									<label class="col-md-4 control-label" for="lname">Last Name</label>  
 									<div class="col-md-6">
-									<input id="lname" name="lname" type="text" placeholder="Last Name" value="Wijenayaka" class="form-control input-md" required="" disabled>
+									<input id="lname" name="lname" type="text" placeholder="Last Name" value="None" class="form-control input-md" required="" disabled>
 									
 									</div>
 								</div>
@@ -98,7 +98,7 @@
 								<div class="row form-group">
 									<label class="col-md-4 control-label" for="email">E-mail</label>  
 									<div class="col-md-6">
-									<input id="email" name="email" type="text" placeholder="E-mail" value="savindi.wijenayaka@gmail.com" class="form-control input-md" required="" disabled>
+									<input id="email" name="email" type="text" placeholder="E-mail" value="None" class="form-control input-md" required="" disabled>
 									
 									</div>
 								</div>
@@ -107,14 +107,14 @@
 								<div class="row form-group">
 									<label class="col-md-4 control-label" for="team">Team</label>  
 									<div class="col-md-6">
-									<input id="team" name="team" type="text" placeholder="Team" value="Applied RnD" class="form-control input-md" required="" disabled>
+									<input id="team" name="team" type="text" placeholder="Team" value="None" class="form-control input-md" required="" disabled>
 									
 									</div>
 								</div>
 								
 							</fieldset>
 						</form>
-									
+						<div class=""> <button id="save-user" class="btn btn--border">Update Profile<span></span></button></div>		
 					</div>
 					
 				</div>
@@ -130,6 +130,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 	
 	<!-- ============== Custom JavaScripts ============== -->
+	<script type="text/javascript" src="JS/user_control_functions.js"></script>
 	<script type="text/javascript" src="JS/account.js"></script>
 </body>
 </html>

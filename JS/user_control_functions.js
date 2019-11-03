@@ -102,7 +102,8 @@ function loginUser(username, password){
         localStorage.setItem("token", JSON.stringify(data));
         localStorage.setItem("username", JSON.stringify(username));
         getUserDetails();
-        // window.location.href = "upload.html";
+        getAnalysis();
+        window.location.href = "upload.html";
     })
     .catch(error => console.error(error))
 }
@@ -168,6 +169,32 @@ function getUserDetails(){
     .then(data => {
         console.log(data);
         localStorage.setItem("user_details", JSON.stringify(data));
+    })
+    .catch(error => console.error(error))
+}
+
+function getAnalysis(){
+    const url = "http://localhost:8080/getanalysis";
+    var token = JSON.parse(localStorage.getItem('token'));
+
+    console.log(token['token']);
+    
+    fetch(url, {
+        method:"GET",
+        headers: {
+            "Authorization": "Bearer "+ token['token']
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        } else{
+            throw new Error('Something went wrong');
+        }
+    })
+    .then(data => {
+        console.log(data);
+        localStorage.setItem("old_analysis", JSON.stringify(data));
     })
     .catch(error => console.error(error))
 }

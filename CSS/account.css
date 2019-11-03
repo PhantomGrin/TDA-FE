@@ -5,8 +5,6 @@
 body{
     font-family: 'Raleway', sans-serif;
 }
-.column{
-}
 
 .column2{
     text-align: center;
@@ -64,4 +62,10 @@ body{
     outline: var(--main-purple) !important;
     border-color: rgba(36, 17, 106, 0.5) !important;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(36, 17, 106, 0.5) !important;
+}
+
+#save-user{
+    width: 150px;
+    margin-top: 1.5em;
+    opacity: 0;
 }
