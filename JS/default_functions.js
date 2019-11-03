@@ -16,15 +16,10 @@ $("#try-sample").click(function (e){
 function analyze_sample(data){
     const url = "http://localhost:8080/trysample"
     var formData  = new FormData();
-    formData.append('text',data)
-
-    // var token = JSON.parse(localStorage.getItem('token'));
+    formData.append('text',data);
 
     fetch(url, {
         method:"POST",
-        // headers: {
-            // "Authorization": "Bearer "+ token['token']
-        // },
         body: formData
     })
     .then(response => response.json())

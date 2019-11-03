@@ -3,6 +3,7 @@ var username;
 $(document).ready(function(){
     try {
         userdetails = JSON.parse(localStorage.getItem('user_details'));
+
         document.getElementById("hello-user").innerHTML = userdetails["firstname"];
         document.getElementById("fname").setAttribute("value", userdetails["firstname"]);
         document.getElementById("lname").setAttribute("value", userdetails["lastname"]);

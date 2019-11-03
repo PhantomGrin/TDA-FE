@@ -6,7 +6,6 @@ $(document).ready(function(){
         oldAnalysis = JSON.parse(localStorage.getItem('old_analysis'));
         document.getElementById("display-name").innerHTML = username;
         displayPreviousAnalysis(oldAnalysis);
-        console.log(oldAnalysis)
 
         $('#old-analysis').DataTable(
             {
@@ -22,12 +21,11 @@ $(document).ready(function(){
 
 function displayPreviousAnalysis(array){
     array.forEach(threadDumpObject => {
-        console.log(threadDumpObject["threadId"]);
         try {
             var inner = document.getElementById("old-analysis-tbody").innerHTML;
             var html = 
                 '<tr>'+
-                    '<td>'+ threadDumpObject["threadId"] +'</td>'+
+                    '<td class="id-data">'+ threadDumpObject["threadId"] +'</td>'+
                     '<td>'+ threadDumpObject["name"] +'</td>'+
                     '<td>'+ threadDumpObject["date"] +'</td>'+
                     '<td>'+ threadDumpObject["date"] + '</td>'+
@@ -47,4 +45,39 @@ function displayPreviousAnalysis(array){
         }
         
     });
+}
+
+$("body").on("click", ".view-analysis-button", function(){
+    var value = $(this).closest("tr").find('td')[0].innerHTML;
+    // alert(value);
+    getSelectedAnalysis(value);
+});
+
+function getSelectedAnalysis(id){
+    const url = `http://localhost:8080/getresult?id=${id}`;
+    var token = JSON.parse(localStorage.getItem('token'));
+
+   
+
+    console.log(token['token']);
+    
+    fetch(url, {
+        method:"GET",
+        headers: {
+            "Authorization": "Bearer "+ token['token']
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        } else{
+            throw new Error('Something went wrong');
+        }
+    })
+    .then(data => {
+        console.log(data);
+        localStorage.setItem("analysis_data", JSON.stringify(data));
+        window.location.href = "dashboard.html";
+    })
+    .catch(error => console.error(error))
 }

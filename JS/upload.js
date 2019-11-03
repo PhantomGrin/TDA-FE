@@ -4,6 +4,62 @@ $(document).ready(function(){
     try {
         username = JSON.parse(localStorage.getItem('username'));
         document.getElementById("display-name").innerHTML = username;
+
+        function getUserDetails(){
+            const url = "http://localhost:8080/user";
+            var token = JSON.parse(localStorage.getItem('token'));
+        
+            console.log(token['token']);
+            
+            fetch(url, {
+                method:"GET",
+                headers: {
+                    "Authorization": "Bearer "+ token['token']
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else{
+                    throw new Error('Something went wrong');
+                }
+            })
+            .then(data => {
+                console.log(data);
+                localStorage.setItem("user_details", JSON.stringify(data));
+            })
+            .catch(error => console.error(error))
+        }
+
+        getUserDetails();
+
+        function getAnalysis(){
+            const url = "http://localhost:8080/getanalysis";
+            var token = JSON.parse(localStorage.getItem('token'));
+        
+            console.log(token['token']);
+            
+            fetch(url, {
+                method:"GET",
+                headers: {
+                    "Authorization": "Bearer "+ token['token']
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else{
+                    throw new Error('Something went wrong');
+                }
+            })
+            .then(data => {
+                console.log(data);
+                localStorage.setItem("old_analysis", JSON.stringify(data));
+            })
+            .catch(error => console.error(error))
+        }
+
+        getAnalysis();
     } catch (error) {
         console.log("Username not set")
         document.getElementById("display-name").innerHTML = "Undefined";
