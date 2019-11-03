@@ -187,7 +187,7 @@
                   <a class="nav-link" href="account.html">ACCOUNT</a>
                 </li>
                 <li class="nav-item nav-animation">
-                  <a class="nav-link" href="#">LOGOUT</a>
+                  <a id="logout-btn" class="nav-link" href="#"  data-toggle="modal" data-target="#logoutModal">LOGOUT</a>
                 </li>
                 <li class="nav-item nav-animation">
                   <a class="nav-link" href="#"><i class="fas fa-bell"></i></a>
@@ -667,8 +667,8 @@
         </div>
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
-          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
+          <button class="btn btn-reset btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a id="final-logout-btn" class="btn btn-reset btn-primary" href="#">Logout</a>
         </div>
       </div>
     </div>
@@ -692,6 +692,7 @@
   <script type="text/javascript" src="JS/charts.js"></script>
   <script type="text/javascript" src="JS/dashboard.js"></script>
   <script type="text/javascript" src="JS/d3tree.js"></script>
+  <script type="text/javascript" src="JS/common_functions.js"></script>
 
 
 </body>

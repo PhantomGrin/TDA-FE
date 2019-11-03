@@ -329,4 +329,3 @@ function display_identicle_stack(identicle_stack_report, identicle_stack_map, th
 
     drawBarChart("myChart3", data, labels, 'rgba(36, 17, 106, 0.3)', 'rgba(36, 17, 106, 0.8)');
 }
-

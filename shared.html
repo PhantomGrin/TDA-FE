@@ -21,7 +21,6 @@
 	
 	<!-- ============== Resources style ============== -->
 	<link rel="stylesheet" href="CSS/nav.css" />
-	<link rel="stylesheet" href="CSS/buttons.css" />
 	<link rel="stylesheet" href="CSS/analyze.css" />
 	<link rel="stylesheet" href="CSS/shared.css" />
 
@@ -59,7 +58,7 @@
 						<a class="nav-link" href="account.html">ACCOUNT</a>
 					</li>
 					<li class="nav-item nav-animation">
-						<a class="nav-link" href="#">LOGOUT</a>
+						<a id="logout-btn" class="nav-link" href="#"  data-toggle="modal" data-target="#logoutModal">LOGOUT</a>
 					</li>
 					<li class="nav-item nav-animation">
 						<a class="nav-link" href="#"><i class="fas fa-bell"></i></a>
@@ -99,9 +98,28 @@
 				</div>
 		</div>
 
+		
+	<!-- Logout Modal-->
+	<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+				<button class="close" type="button" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">×</span>
+				</button>
+				</div>
+				<div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+				<div class="modal-footer">
+				<button class="btn btn-reset btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+				<a id="final-logout-btn" class="btn btn-reset btn-primary" href="#">Logout</a>
+				</div>
+			</div>
+			</div>
+		</div>
+
 	</div>
-	
-	
+	  
 	<!-- ============== Bootstrap 4.0 JavaScripts ============== -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -113,5 +131,6 @@
 	<!-- ============== Custom JavaScripts ============== -->
 	<script type="text/javascript" src="JS/datatables.js"></script>
 	<script type="text/javascript" src="JS/shared.js"></script>
+	<script type="text/javascript" src="JS/common_functions.js"></script>
 </body>
 </html>
