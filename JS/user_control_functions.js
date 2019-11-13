@@ -37,7 +37,7 @@ $("#register-button").click(function (e){
 });
 
 function registerUser(fname, lname, email, team, password){
-    const url = "http://localhost:8080/auth/registration";
+    const url = serverURL + "/auth/registration";
 
     var formData  = {
         "username": email,
@@ -71,7 +71,7 @@ function registerUser(fname, lname, email, team, password){
 }
 
 function loginUser(username, password){
-    const url = "http://localhost:8080/auth";
+    const url = serverURL + "/auth";
     var formData  = {"username": username, "password": password};
     var status;
     

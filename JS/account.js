@@ -40,7 +40,7 @@ $("#save-user").click(function (e){
 });
 
 function updateUser(fname, lname, email, team){
-    const url = "http://localhost:8080/user";
+    const url = serverURL + "/user";
     var token = JSON.parse(localStorage.getItem('token'));
 
     var formData  = {

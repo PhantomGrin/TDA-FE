@@ -14,7 +14,7 @@ $("#try-sample").click(function (e){
 });
 
 function analyze_sample(data){
-    const url = "http://localhost:8080/trysample"
+    const url = serverURL + "/trysample"
     var formData  = new FormData();
     formData.append('text',data);
 

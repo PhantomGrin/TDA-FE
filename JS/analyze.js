@@ -91,7 +91,7 @@ function getSelectedAnalysis(id){
 }
 
 function retrieveTeamMembers(){
-    const url = `http://localhost:8080/team`;
+    const url = serverURL + `/team`;
     var token = JSON.parse(localStorage.getItem('token'));
     
     fetch(url, {

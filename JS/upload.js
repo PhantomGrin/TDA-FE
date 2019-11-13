@@ -6,7 +6,7 @@ $(document).ready(function(){
         document.getElementById("display-name").innerHTML = username;
 
         function getUserDetails(){
-            const url = "http://localhost:8080/user";
+            const url = serverURL + "/user";
             var token = JSON.parse(localStorage.getItem('token'));
             
             fetch(url, {
@@ -31,7 +31,7 @@ $(document).ready(function(){
         getUserDetails();
 
         function getAnalysis(){
-            const url = "http://localhost:8080/getanalysis";
+            const url = serverURL + "/getanalysis";
             var token = JSON.parse(localStorage.getItem('token'));
             
             fetch(url, {
@@ -56,7 +56,7 @@ $(document).ready(function(){
         getAnalysis();
 
         function getSharedAnalysis(){
-            const url = "http://localhost:8080/shared";
+            const url = serverURL + "/shared";
             var token = JSON.parse(localStorage.getItem('token'));
             
             fetch(url, {
@@ -109,7 +109,7 @@ $("#dump-file").change(function(e){
 
 $("#upload-dump").click(function(e) {
     e.preventDefault();
-    const url = "http://localhost:8080/analyze";
+    const url = serverURL + "/analyze";
 
     var input = document.querySelector('input[type="file"]');
     var data = new FormData()

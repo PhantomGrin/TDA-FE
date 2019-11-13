@@ -21,6 +21,7 @@ $(document).ready(function(){
         username = JSON.parse(localStorage.getItem('username'));
     } catch (error) {
         console.log(error)
+        window.location.href = "index.html"
     }
     
     if(sampleFlag == true){
@@ -29,10 +30,12 @@ $(document).ready(function(){
     }else{
         document.getElementById("display-name").innerHTML = username;
     }
-
-    if(analysis_data != undefined){
+    
+    if(analysis_data != null){
         display_analysis(analysis_data);
+        
     }else{
+        window.location.href = "index.html"
         document.getElementById("thread-dump-title").innerHTML = 'ERROR IN DUMP FILE : CANNOT ANALYZE';
     }
 });

@@ -55,7 +55,7 @@ $("body").on("click", ".view-analysis-button", function(){
 });
 
 function getSelectedAnalysis(id){
-    const url = `http://localhost:8080/getresult?id=${id}`;
+    const url = serverURL + `/getresult?id=${id}`;
     var token = JSON.parse(localStorage.getItem('token'));
 
     console.log(token['token']);
