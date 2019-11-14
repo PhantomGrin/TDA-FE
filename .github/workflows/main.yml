@@ -13,4 +13,4 @@ jobs:
           aws s3 cp \
             --recursive \
             --acl public-read \
-            ./_site/ [s3://bucket_name] # my bucket_name
+            ./ s3://tdafe # my bucket_name
