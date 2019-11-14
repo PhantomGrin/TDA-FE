@@ -62,8 +62,22 @@ function updateUser(fname, lname, email, team){
     })
     .then(response => {
         if (response.status == 200) {
+            document.getElementById("msgModalLabel").innerHTML="SUCCESS!!!";
+            document.getElementById("msgModelBody").innerHTML="successfully updated your profile details :) ";
+            $("#editModel").modal('show'); 
+            document.getElementById("edit-user").style.opacity = "1";
+            document.getElementById("save-user").style.opacity = "0";
+            document.getElementById("fname").disabled = true;
+            document.getElementById("lname").disabled = true;
+            document.getElementById("email").disabled = true;
+            document.getElementById("team").disabled = true;
             console.log("Success")
         }
     })
-    .catch(error => console.error(error))
+    .catch(error =>{
+        document.getElementById("msgModalLabel").innerHTML="Failed!!!";
+        document.getElementById("msgModelBody").innerHTML="Sorry, Something went wrong :( " ;
+        $("#editModel").modal('show'); 
+        console.error(error)})
+        
 }

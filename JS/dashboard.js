@@ -27,6 +27,7 @@ $(document).ready(function(){
     if(sampleFlag == true){
         document.getElementById("sample-clear").innerHTML = '<p id="reg-now"> REGISTER TO RECEIVE FULL FUNCTIONALITY </p>';
         document.getElementById("link-home").setAttribute("href","index.html");
+        document.getElementById("prev_shared").innerHTML="";
     }else{
         document.getElementById("display-name").innerHTML = username;
     }
@@ -38,8 +39,32 @@ $(document).ready(function(){
         window.location.href = "index.html"
         document.getElementById("thread-dump-title").innerHTML = 'ERROR IN DUMP FILE : CANNOT ANALYZE';
     }
-});
 
+    showShared('shared_analysis');
+    showShared('old_analysis');
+});
+function showShared(sidebarItem){
+    let shared = JSON.parse(localStorage.getItem(sidebarItem));
+    let sharing=""
+    for (let index = 0; index <3&&index<shared.length; index++) {
+        let share = shared[index];
+        
+        sharing=sharing+
+        `<li class="nav-item">
+          <a class="nav-link first-link" href="">
+            <i class="fas fa-fw fa-table"></i>
+            <span>${share['name']}</span></a>
+        </li>`
+        
+    } 
+    if(sidebarItem=="shared_analysis"){
+        document.getElementById("shared").innerHTML=sharing;
+    }
+    else{
+        document.getElementById("previous").innerHTML=sharing;
+    } 
+    
+}
 function display_analysis(jsonData){
     var state_vise = jsonData.state_vise;
     var deamons = jsonData.deamons;
@@ -49,7 +74,7 @@ function display_analysis(jsonData){
     var identicle_stack_report = jsonData.identicle_stack_report;
     var identicle_stack_map = jsonData.identicle_stack_map;
 
-    console.log(identicle_stack_report)
+    // console.log(identicle_stack_report)
 
     display_statevise(state_vise, threadMap);
     display_deamons(deamons);
@@ -332,3 +357,4 @@ function display_identicle_stack(identicle_stack_report, identicle_stack_map, th
 
     drawBarChart("myChart3", data, labels, 'rgba(36, 17, 106, 0.3)', 'rgba(36, 17, 106, 0.8)');
 }
+

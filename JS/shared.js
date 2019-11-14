@@ -35,7 +35,6 @@ function displaySharedAnalysis(array){
                     '<td class="button-group-wrapper justify-content-center justify-content-md-center">'+
                         '<div class="joption-button-group ustify-content-center justify-content-md-center">'+
                             '<button class="option-buttons view-analysis-button" data-toggle="tooltip" data-placement="top" title="View Analysis"><i class="fas fa-external-link-alt"></i></button>'+
-                            '<button class="option-buttons delete-analysis-button" data-toggle="tooltip" data-placement="top" title="Delete Analysis"><i class="fas fa-trash"></i></button>'+
                         '</div>'+
                     '</td>'+
                 '</tr>';

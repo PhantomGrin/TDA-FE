@@ -11013,7 +11013,7 @@ body.sidebar-toggled footer.sticky-footer {
 }
 
 #logged-details{
-  padding-left: 14em;
+  padding-left: 14em !important;
 }
 
 .bg-purple{

@@ -2,11 +2,10 @@ var username;
 
 $(document).ready(function(){
     try {
-        username = JSON.parse(localStorage.getItem('username'));
-        oldAnalysis = JSON.parse(localStorage.getItem('old_analysis'));
+        getAnalysis().then(data=>{
+            oldAnalysis = JSON.parse(localStorage.getItem('old_analysis'));
         document.getElementById("display-name").innerHTML = username;
         displayPreviousAnalysis(oldAnalysis);
-
         $('#old-analysis').DataTable(
             {
               "lengthChange": false,
@@ -14,6 +13,11 @@ $(document).ready(function(){
             }
         );
         retrieveTeamMembers();
+        })
+        username = JSON.parse(localStorage.getItem('username'));
+        
+        
+        
     } catch (error) {
         console.log("Username not set")
         document.getElementById("display-name").innerHTML = "Undefined";
@@ -21,6 +25,7 @@ $(document).ready(function(){
 });
 
 function displayPreviousAnalysis(array){
+    
     array.forEach(threadDumpObject => {
         try {
             var inner = document.getElementById("old-analysis-tbody").innerHTML;
@@ -53,6 +58,11 @@ $("body").on("click", ".view-analysis-button", function(){
     getSelectedAnalysis(value);
 });
 
+$("body").on("click", ".delete-analysis-button", function(){
+    var value = $(this).closest("tr").find('td')[0].innerHTML;
+    deleteAnalysis(value);
+});
+
 $("body").on("click", ".share-analysis-button", function(){
     var value = $(this).closest("tr").find('td')[0].innerHTML;
     localStorage.setItem("selected_dump", JSON.stringify(value));
@@ -63,8 +73,37 @@ $("body").on("click", ".share-analysis-button", function(){
     displayTeam(team);
 });
 
+function deleteAnalysis(id){
+    const url = serverURL +`/delete?id=${id}`;
+    var token = JSON.parse(localStorage.getItem('token'));
+
+    console.log(token['token']);
+    
+    fetch(url, {
+        method:"GET",
+        headers: {
+            "Authorization": "Bearer "+ token['token']
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+           getAnalysis().then(data=>{
+            oldAnalysis=JSON.parse(localStorage.getItem('old_analysis'));
+            document.getElementById("old-analysis-tbody").innerHTML="";
+            displayPreviousAnalysis(oldAnalysis);
+            
+           })  
+           return  response;
+        } else{
+            throw new Error('Something went wrong');
+        }
+       
+    })
+    .catch(error => console.log(error))
+}
+
 function getSelectedAnalysis(id){
-    const url = `http://localhost:8080/getresult?id=${id}`;
+    const url = serverURL +`/getresult?id=${id}`;
     var token = JSON.parse(localStorage.getItem('token'));
 
     console.log(token['token']);

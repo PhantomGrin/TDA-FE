@@ -4,87 +4,62 @@ $(document).ready(function(){
     try {
         username = JSON.parse(localStorage.getItem('username'));
         document.getElementById("display-name").innerHTML = username;
-
-        function getUserDetails(){
-            const url = serverURL + "/user";
-            var token = JSON.parse(localStorage.getItem('token'));
-            
-            fetch(url, {
-                method:"GET",
-                headers: {
-                    "Authorization": "Bearer "+ token['token']
-                }
-            })
-            .then(response => {
-                if (response.ok) {
-                    return response.json();
-                } else{
-                    throw new Error('Something went wrong');
-                }
-            })
-            .then(data => {
-                localStorage.setItem("user_details", JSON.stringify(data));
-            })
-            .catch(error => console.error(error))
-        }
-
         getUserDetails();
-
-        function getAnalysis(){
-            const url = serverURL + "/getanalysis";
-            var token = JSON.parse(localStorage.getItem('token'));
-            
-            fetch(url, {
-                method:"GET",
-                headers: {
-                    "Authorization": "Bearer "+ token['token']
-                }
-            })
-            .then(response => {
-                if (response.ok) {
-                    return response.json();
-                } else{
-                    throw new Error('Something went wrong');
-                }
-            })
-            .then(data => {
-                localStorage.setItem("old_analysis", JSON.stringify(data));
-            })
-            .catch(error => console.error(error))
-        }
-
         getAnalysis();
-
-        function getSharedAnalysis(){
-            const url = serverURL + "/shared";
-            var token = JSON.parse(localStorage.getItem('token'));
-            
-            fetch(url, {
-                method:"GET",
-                headers: {
-                    "Authorization": "Bearer "+ token['token']
-                }
-            })
-            .then(response => {
-                if (response.ok) {
-                    return response.json();
-                } else{
-                    throw new Error('Something went wrong');
-                }
-            })
-            .then(data => {
-                console.log(data);
-                localStorage.setItem("shared_analysis", JSON.stringify(data));
-            })
-            .catch(error => console.error(error))
-        }
-
         getSharedAnalysis();
+
     } catch (error) {
         console.log("Username not set")
         document.getElementById("display-name").innerHTML = "Undefined";
     }
 });
+
+function getUserDetails(){
+    const url = serverURL + "/user";
+    var token = JSON.parse(localStorage.getItem('token'));
+    
+    fetch(url, {
+        method:"GET",
+        headers: {
+            "Authorization": "Bearer "+ token['token']
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        } else{
+            throw new Error('Something went wrong');
+        }
+    })
+    .then(data => {
+        localStorage.setItem("user_details", JSON.stringify(data));
+    })
+    .catch(error => console.error(error))
+}
+
+function getSharedAnalysis(){
+    const url = serverURL + "/shared";
+    var token = JSON.parse(localStorage.getItem('token'));
+    
+    fetch(url, {
+        method:"GET",
+        headers: {
+            "Authorization": "Bearer "+ token['token']
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            return response.json();
+        } else{
+            throw new Error('Something went wrong');
+        }
+    })
+    .then(data => {
+        console.log(data);
+        localStorage.setItem("shared_analysis", JSON.stringify(data));
+    })
+    .catch(error => console.error(error))
+}
 
 $("#chose-dump").click(function(e) {
     e.preventDefault();

@@ -68,64 +68,47 @@
 
       <!-- Nav Item - Culprit Report -->
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="#culprit-report">
           <i class="fas fa-bug"></i>
           <span>Culprit Report</span></a>
       </li>
 
       <!-- Nav Item - Daemon vs Non-Daemon Summary -->
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="#deamon-report">
           <i class="fas fa-angry"></i>
           <span>Daemon vs Non-Daemon</span></a>
       </li>
       
       <!-- Nav Item - Stack Length Summary -->
       <li class="nav-item">
-          <a class="nav-link" href="#">
+          <a class="nav-link" href="#slength-report">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Stack Length</span></a>
         </li>
 
       <!-- Nav Item - Identical Stack Trace Summary -->
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="#identicle-stack-report">
           <i class="fas fa-vials"></i>
           <span>Identical StackTrace</span></a>
       </li>
       
-      <!-- Nav Item - GC vs Non-GC Summary -->
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          <i class="fas fa-recycle"></i>
-          <span>GC vs Non-GC</span></a>
-      </li>
 
       <!-- Divider -->
       <hr class="sidebar-divider">
 
+      <div id="prev_shared">
       <!-- Heading -->
       <div class="sidebar-heading first-link">
         Previous
       </div>
-
-      <!-- Nav Item - Report 1 -->
-      <li class="nav-item">
-        <a class="nav-link first-link" href="charts.html">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Report 10928</span></a>
-      </li>
-
-      <!-- Nav Item - Report 2 -->
-      <li class="nav-item">
-        <a class="nav-link" href="tables.html">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Report 10945</span></a>
-      </li>
-
+      <div id="previous">
+          <!-- Nav Item - Report 1 -->
+        </div>
       <!-- More button -->
       <div class="text-center d-none d-md-inline">
-        <button class="border-0 more-button" id=""><i class="fas fa-chevron-down more-icon"></i> More...</button>
+        <button class="border-0 more-button" id=""><a href="analysis.html"><i class="fas fa-chevron-down more-icon"></i> More...</a></button>
       </div>
 
       <!-- Divider -->
@@ -136,23 +119,13 @@
         Shared
       </div>
 
-      <!-- Nav Item - Report 1 -->
-      <li class="nav-item">
-        <a class="nav-link first-link" href="charts.html">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Report 10928</span></a>
-      </li>
-
-      <!-- Nav Item - Report 2 -->
-      <li class="nav-item">
-        <a class="nav-link" href="tables.html">
-          <i class="fas fa-fw fa-table"></i>
-          <span>Report 10945</span></a>
-      </li>
-
+      <div id="shared">
+          <!-- Nav Item - Report 1 -->
+        </div>
       <!-- More button -->
       <div class="text-center d-none d-md-inline">
-        <button class="border-0 more-button" id=""><i class="fas fa-chevron-down more-icon"></i> More...</button>
+        <button class="border-0 more-button" id=""><a href="shared.html"><i class="fas fa-chevron-down more-icon"></i> More...</a></button>
+      </div>
       </div>
 
 
@@ -170,13 +143,16 @@
             <div id="sample-clear" class="container-fluid">
               <div id="logged-details">
                 <img class="display-avatar" src="images/avatar.jpg" alt="avatar">
-                <p id="display-name" class="display-name" display-name>savindi.wijenayaka@gmail.com</p>
+                <p id="display-name" class="display-name" display-name></p>
               </div>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarResponsive">
               <ul class="navbar-nav ml-auto topBotomBordersOut">
+                <li class="nav-item nav-animation">
+                  <a class="nav-link" href="upload.html">UPLOAD<span class="sr-only"></span></a>
+                </li>
                 <li class="nav-item nav-animation">
                   <a class="nav-link" href="analysis.html">YOUR ANALYSIS<span class="sr-only">(current)</span></a>
                 </li>
@@ -201,7 +177,7 @@
 
         <!-- Begin Page Content -->
         <div class="container-fluid main-page-content">
-          <h2 id="thread-dump-title">Thread Dump : <span id="thread-dump-id">RE12908</span> Analysis Report</h2>
+          <h2 id="thread-dump-title">Thread Dump : RE00<span id="thread-dump-id">XX</span> Analysis Report</h2>
 
           <!-- ============== State-vice Summary ============== -->
           <h3 id="state-vice" class="main-topic">State-vice Summery</h3>
