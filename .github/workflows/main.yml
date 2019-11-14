@@ -13,5 +13,4 @@ jobs:
           aws s3 cp \
             --recursive \
             --acl public-read \
-            --region eu-central-1 \ # my region
             ./_site/ [s3://bucket_name] # my bucket_name
