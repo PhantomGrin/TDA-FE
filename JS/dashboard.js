@@ -1,5 +1,6 @@
 var analysis_data;
 var sampleFlag;
+var analysis_name;
     
 var colorBG = [
     'rgba(23, 162, 184, 0.3)',
@@ -19,6 +20,7 @@ $(document).ready(function(){
         analysis_data = JSON.parse(localStorage.getItem('analysis_data'));
         sampleFlag = JSON.parse(localStorage.getItem('sample'));
         username = JSON.parse(localStorage.getItem('username'));
+        analysis_name = JSON.parse(localStorage.getItem('analysis_name'));
     } catch (error) {
         console.log(error)
         window.location.href = "index.html"
@@ -28,6 +30,7 @@ $(document).ready(function(){
         document.getElementById("sample-clear").innerHTML = '<p id="reg-now"> REGISTER TO RECEIVE FULL FUNCTIONALITY </p>';
         document.getElementById("link-home").setAttribute("href","index.html");
         document.getElementById("prev_shared").innerHTML="";
+        document.getElementById("thread-dump-id").innerHTML="Sample";
     }else{
         document.getElementById("display-name").innerHTML = username;
     }
@@ -39,13 +42,16 @@ $(document).ready(function(){
         window.location.href = "index.html"
         document.getElementById("thread-dump-title").innerHTML = 'ERROR IN DUMP FILE : CANNOT ANALYZE';
     }
+    if(analysis_name != null){
+        document.getElementById("thread-dump-id").innerHTML=analysis_name;
+    }
 
     showShared('shared_analysis');
     showShared('old_analysis');
 });
 function showShared(sidebarItem){
     let shared = JSON.parse(localStorage.getItem(sidebarItem));
-    let sharing=""
+    let sharing="";
     for (let index = 0; index <3&&index<shared.length; index++) {
         let share = shared[index];
         

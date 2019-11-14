@@ -55,7 +55,8 @@ function displayPreviousAnalysis(array){
 
 $("body").on("click", ".view-analysis-button", function(){
     var value = $(this).closest("tr").find('td')[0].innerHTML;
-    getSelectedAnalysis(value);
+    var name = $(this).closest("tr").find('td')[1].innerHTML;
+    getSelectedAnalysis(value, name);
 });
 
 $("body").on("click", ".delete-analysis-button", function(){
@@ -102,9 +103,10 @@ function deleteAnalysis(id){
     .catch(error => console.log(error))
 }
 
-function getSelectedAnalysis(id){
+function getSelectedAnalysis(id, name){
     const url = serverURL +`/getresult?id=${id}`;
     var token = JSON.parse(localStorage.getItem('token'));
+    localStorage.setItem("analysis_name", JSON.stringify(name));
 
     console.log(token['token']);
     
